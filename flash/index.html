@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,24 @@
     <title>Document</title>
     <script>
         setInterval(() => {
-            const color = (document.bgColor ?? 'white') === 'white' ? 'black' : 'white'
-            const text = (document.bgColor ?? 'black') === 'black' ? 'black' : 'white'
-            document.bgColor = (document.bgColor ?? 'white') === 'white' ? 'black' : 'white'
-        }, 30)
+            const color = (document.body.style.backgroundColor ?? 'white') === 'white' ? 'black' : 'white'
+            const text = (document.body.style.backgroundColor ?? 'black') === 'black' ? 'black' : 'white'
+            document.body.style.backgroundColor = (document.body.style.backgroundColor ?? 'white') === 'white' ? 'black' : 'white'
+            document.getElementById('t').style.color = text
+        }, 3000)
     </script>
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1 id="t">fuck you</h1>
 </body>
+
 </html>
