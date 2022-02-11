@@ -1,9 +1,21 @@
 const link_loader = document.getElementById("link-loader");
 const links = {
-  github: "https://github.com/HighArcs",
-  organization: "https://github.com/rqft",
-  discord: "Arcs#4587",
-  twitter: "https://twitter.com/HighArcs",
+  GitHub: {
+    url: "https://github.com/HighArcs",
+    name: "Github / HighArcs",
+  },
+  Organization: {
+    url: "https://github.com/rqft",
+    name: "GitHub / rqft",
+  },
+  Discord: {
+    url: null,
+    name: "Discord / Arcs#4587",
+  },
+  Twitter: {
+    url: "https://twitter.com/HighArcs",
+    name: "Twitter / HighArcs",
+  },
 };
 function isUrl(uri) {
   return uri.startsWith("http://") || uri.startsWith("https://");
@@ -11,11 +23,12 @@ function isUrl(uri) {
 let ret = [];
 for (let key in links) {
   let value = links[key];
-  console.log(value);
-  let str = key;
-  if (isUrl(value)) {
-    str = `<a href="${value}" target="_blank" class="underline text-blue-400">${key}</a>`;
+  if (value.url) {
+    ret.push(
+      `<a href="${value.url}" target="_blank" class="text-blue-400">${value.name}</a>`
+    );
+  } else {
+    ret.push(`<span>${value.name}</span>`);
   }
-  ret.push(str);
 }
-link_loader.innerHTML = ret.join(" | ");
+link_loader.innerHTML = ret.join("<br>");
