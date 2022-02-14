@@ -468,36 +468,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.left-0 {
-  left: 0px;
+.container {
+  width: 100%;
 }
 
-.-left-1 {
-  left: -0.25rem;
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
 }
 
-.-left-10 {
-  left: -2.5rem;
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
 }
 
-.bottom-0 {
-  bottom: 0px;
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
 }
 
-.top-auto {
-  top: auto;
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
 }
 
-.m-auto {
-  margin: auto;
-}
-
-.m-72 {
-  margin: 18rem;
-}
-
-.m-0 {
-  margin: 0px;
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 
 .my-auto {
@@ -505,24 +507,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: auto;
 }
 
-.ml-0 {
-  margin-left: 0px;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
-}
-
-.ml-20 {
-  margin-left: 5rem;
-}
-
 .ml-52 {
   margin-left: 13rem;
-}
-
-.mb-auto {
-  margin-bottom: auto;
 }
 
 .flex {
@@ -533,71 +519,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.flex-grow {
-  flex-grow: 1;
-}
-
-.origin-center {
-  transform-origin: center;
-}
-
-.cursor-sw-resize {
-  cursor: sw-resize;
-}
-
-.snap-center {
-  scroll-snap-align: center;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.content-center {
-  align-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.self-center {
-  align-self: center;
-}
-
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
 .p-10 {
   padding: 2.5rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.align-middle {
-  vertical-align: middle;
-}
-
-.align-text-bottom {
-  vertical-align: text-bottom;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-9xl {
@@ -610,13 +533,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.font-bold {
-  font-weight: 700;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-semibold {
@@ -625,4 +544,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-medium {
   font-weight: 500;
+}
+
+.__link {
+  color: rgb(2 132 199);
+}
+
+.__link:hover {
+  color: rgb(7 89 133);
+}
+
+.__link:active {
+  color: rgb(159 18 57);
 }

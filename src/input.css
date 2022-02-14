@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.__link {
+  color: rgb(2 132 199);
+}
+.__link:hover {
+  color: rgb(7 89 133);
+}
+.__link:active {
+  color: rgb(159 18 57);
+}
