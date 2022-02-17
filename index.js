@@ -1,7 +1,8 @@
 //#region Utilities
 const inverse = (x) => 1 / x;
 const clamp = (x, min, max) => Math.min(Math.max(x, min), max);
-const isInbound = (x, y, mw, mh, w, h) => x >= mw && y >= mh && x < w && y < h;
+const isInbound = (x, y, minX, minY, maxX, maxY) =>
+  x < minX || x > maxX || y < minY || y > maxY;
 
 ////#endregion
 
@@ -38,6 +39,7 @@ const verifyRatio = (w, h, r) => {
 
 //#region Elements
 const link_loader = document.getElementById("link-loader");
+const page_loader = document.getElementById("page-loader");
 const container = document.getElementById("container");
 const window_resize_error = document.getElementById("window-size-error");
 const container_content = document.getElementById("content");
@@ -59,14 +61,43 @@ const links = {
 };
 
 //#region Link Loader
-let ret = [];
-for (let [name, _links] of Object.entries(links)) {
-  ret.push(`${name}`);
-  for (let [name, link] of Object.entries(_links)) {
-    ret.push(`${tab(4)} / <a href="${link}" class="__link">${name}</a>`);
+{
+  let ret = [];
+  for (let [name, _links] of Object.entries(links)) {
+    ret.push(`${name}`);
+    for (let [name, link] of Object.entries(_links)) {
+      ret.push(`${tab(4)} / <a href="${link}" class="__link">${name}</a>`);
+    }
   }
+  link_loader.innerHTML = ret.join("<br>");
 }
-link_loader.innerHTML = ret.join("<br>");
+//#endregion
+
+const pages = {
+  Home: {
+    Main: "/",
+  },
+  Projects: {
+    Main: "/projects",
+    Vybose: "/projects/vybose",
+    PyClone: "/projects/pyclone",
+    NotSoPylon: "/projects/not-so-pylon",
+  },
+  About: {
+    Main: "/about",
+  },
+};
+//#region Page Loader
+{
+  let ret = [];
+  for (let [name, _links] of Object.entries(pages)) {
+    ret.push(`${name}`);
+    for (let [name, link] of Object.entries(_links)) {
+      ret.push(`${tab(4)} / <a href=".${link}" class="__link">${name}</a>`);
+    }
+  }
+  page_loader.innerHTML = ret.join("<br>");
+}
 //#endregion
 
 //#region Window Resize
@@ -79,9 +110,7 @@ link_loader.innerHTML = ret.join("<br>");
 function onResize(that, ui) {
   const width = window.innerWidth;
   const height = window.innerHeight;
-  if (
-    isInbound(width, height, MINUMUM_WIDTH, MINUMUM_HEIGHT, Infinity, Infinity)
-  ) {
+  if (isInbound(width, height, MINUMUM_WIDTH, MINUMUM_HEIGHT, width, height)) {
     window_resize_error.classList.remove("hidden");
     container_content.classList.add("hidden");
   } else {
@@ -90,7 +119,7 @@ function onResize(that, ui) {
   }
 }
 
-onResize();
-window.addEventListener("resize", onResize);
+// onResize(window, new UIEvent("resize", { view: window }));
+// window.addEventListener("resize", onResize);
 
 //#endregion
