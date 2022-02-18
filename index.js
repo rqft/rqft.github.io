@@ -3,6 +3,18 @@ const inverse = (x) => 1 / x;
 const clamp = (x, min, max) => Math.min(Math.max(x, min), max);
 const isInbound = (x, y, minX, minY, maxX, maxY) =>
   x < minX || x > maxX || y < minY || y > maxY;
+const readFile = (path) => fetch(path).then((response) => response.json());
+
+const createContentTree = (tree, element) => {
+  let ret = [];
+  for (let [key, value] of Object.entries(tree)) {
+    ret.push(`${key}`);
+    for (let [name, child] of Object.entries(value)) {
+      ret.push(`${tab(4)} / <a href="${child}" class="__link">${name}</a>`);
+    }
+  }
+  element.innerHTML = ret.join("<br>");
+};
 
 ////#endregion
 
@@ -10,7 +22,9 @@ const isInbound = (x, y, minX, minY, maxX, maxY) =>
 const ZERO_WIDTH_SPACE = "\u200B";
 const SPACE = " ";
 const FILLER_TAB = ZERO_WIDTH_SPACE + SPACE;
-const tab = (n) => FILLER_TAB.repeat(n);
+function tab(n) {
+  return FILLER_TAB.repeat(n);
+}
 
 /**
  *
@@ -18,7 +32,9 @@ const tab = (n) => FILLER_TAB.repeat(n);
  * @param {number} height
  * @returns {{width: number, height: number, ratio: number}}
  */
-const ratio = (width, height) => ({ width, height, value: width / height });
+function ratio(width, height) {
+  return { width, height, value: width / height };
+}
 const RATIOS = {
   square: ratio(1, 1),
   old: ratio(4, 3),
@@ -61,43 +77,17 @@ const links = {
 };
 
 //#region Link Loader
-{
-  let ret = [];
-  for (let [name, _links] of Object.entries(links)) {
-    ret.push(`${name}`);
-    for (let [name, link] of Object.entries(_links)) {
-      ret.push(`${tab(4)} / <a href="${link}" class="__link">${name}</a>`);
-    }
-  }
-  link_loader.innerHTML = ret.join("<br>");
-}
+(async () => {
+  const links = await readFile("./i/json/links.json");
+  return createContentTree(links, link_loader);
+})();
 //#endregion
 
-const pages = {
-  Home: {
-    Main: "/",
-  },
-  Projects: {
-    Main: "/projects",
-    Vybose: "/projects/vybose",
-    PyClone: "/projects/pyclone",
-    NotSoPylon: "/projects/not-so-pylon",
-  },
-  About: {
-    Main: "/about",
-  },
-};
 //#region Page Loader
-{
-  let ret = [];
-  for (let [name, _links] of Object.entries(pages)) {
-    ret.push(`${name}`);
-    for (let [name, link] of Object.entries(_links)) {
-      ret.push(`${tab(4)} / <a href=".${link}" class="__link">${name}</a>`);
-    }
-  }
-  page_loader.innerHTML = ret.join("<br>");
-}
+(async () => {
+  const pages = await readFile("./i/json/pages.json");
+  return createContentTree(pages, page_loader);
+})();
 //#endregion
 
 //#region Window Resize

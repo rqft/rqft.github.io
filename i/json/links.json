@@ -1,0 +1,14 @@
+{
+    "Github": {
+        "Arcs": "https://github.com/HighArcs",
+        "rqft": "https://github.com/rqft"
+    },
+    "Twitter": {
+        "@HighArcs": "https://twitter.com/HighArcs"
+    },
+    "Discord": {
+        "Arcs#4587": "https://discord.com/@me/users/:id",
+        "Frequence": "https://discord.gg/:id",
+        "Hanas": "https://discord.gg/:id"
+    }
+}

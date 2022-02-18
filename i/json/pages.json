@@ -1,0 +1,14 @@
+{
+    "Home": {
+        "Main": "./"
+    },
+    "Projects": {
+        "Main": "./projects",
+        "Vybose": "./projects/vybose",
+        "NotSoPylon": "./projects/notsopylon"
+    },
+    "Funnies": {
+        "qt": "./qt",
+        "lol": "./lol"
+    }
+}
