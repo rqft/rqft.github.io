@@ -10,5 +10,8 @@
     "Funnies": {
         "qt": "./qt",
         "lol": "./lol"
+    },
+    "Tools": {
+        "random / id": "./tools/random/id"
     }
 }
