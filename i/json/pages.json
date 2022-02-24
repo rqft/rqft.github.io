@@ -13,5 +13,8 @@
     },
     "Tools": {
         "random / id": "./tools/random/id"
+    },
+    "Cool Stuff": {
+        "Color Time": "./clock"
     }
 }
