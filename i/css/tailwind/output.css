@@ -515,42 +515,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 5em;
 }
 
-.ml-\[6em\] {
-  margin-left: 6em;
-}
-
-.ml-96 {
-  margin-left: 24rem;
-}
-
-.ml-\[1000em\] {
-  margin-left: 1000em;
-}
-
-.ml-\[100em\] {
-  margin-left: 100em;
-}
-
-.ml-\[10em\] {
-  margin-left: 10em;
-}
-
-.ml-\[10vw\] {
-  margin-left: 10vw;
-}
-
-.ml-\[1vw\] {
-  margin-left: 1vw;
-}
-
-.ml-\[50\%vw\] {
-  margin-left: 50%vw;
-}
-
-.ml-\[50\%\] {
-  margin-left: 50%;
-}
-
 .ml-\[25\%\] {
   margin-left: 25%;
 }
@@ -571,6 +535,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1em;
 }
 
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
@@ -586,19 +554,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .font-semibold {
@@ -607,6 +570,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-\[100\] {
+  font-weight: 100;
+}
+
+.font-\[1\] {
+  font-weight: 1;
+}
+
+.font-\[10\] {
+  font-weight: 10;
 }
 
 .__link {
@@ -619,4 +602,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .__link:active {
   color: rgb(159 18 57);
+}
+
+.hover\:font-mono:hover {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.hover\:font-serif:hover {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.hover\:font-extralight:hover {
+  font-weight: 200;
+}
+
+.hover\:font-bold:hover {
+  font-weight: 700;
 }
