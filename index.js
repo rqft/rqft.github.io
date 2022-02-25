@@ -56,25 +56,11 @@ const verifyRatio = (w, h, r) => {
 //#region Elements
 const link_loader = document.getElementById("link-loader");
 const page_loader = document.getElementById("page-loader");
+const people_loader = document.getElementById("people-loader");
 const container = document.getElementById("container");
 const window_resize_error = document.getElementById("window-size-error");
 const container_content = document.getElementById("content");
 //#endregion
-
-const links = {
-  GitHub: {
-    HighArcs: "https://github.com/HighArcs",
-    Organization: "https://github.com/rqft",
-  },
-  Discord: {
-    Arcs: "https://discord.com/@me/users/:id",
-    Hanas: "https://discord.gg/:id",
-    Frequence: "https://discord.gg/:id",
-  },
-  Twitter: {
-    "@HighArcs": "https://twitter.com/HighArcs",
-  },
-};
 
 //#region Link Loader
 (async () => {
@@ -87,6 +73,13 @@ const links = {
 (async () => {
   const pages = await readFile("./i/json/pages.json");
   return createContentTree(pages, page_loader);
+})();
+//#endregion
+
+//#region People Loader
+(async () => {
+  const people = await readFile("./i/json/cool.json");
+  return createContentTree(pages, people_loader);
 })();
 //#endregion
 
