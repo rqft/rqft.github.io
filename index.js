@@ -78,8 +78,8 @@ const container_content = document.getElementById("content");
 
 //#region People Loader
 (async () => {
-  const people = await readFile("./i/json/cool.json");
-  return createContentTree(pages, people_loader);
+  const people = await readFile("./i/json/people.json");
+  return createContentTree(people, people_loader);
 })();
 //#endregion
 
