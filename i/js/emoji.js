@@ -41,4 +41,4 @@ function emojify(o) {
   o = o.replace(/[^:\w\s]/g, ":black_large_square:");
   return o;
 }
-console.log(emojify("{args}"));
+console.log(emojify(args));
