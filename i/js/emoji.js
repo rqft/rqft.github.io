@@ -38,6 +38,7 @@ var s = {
 function emojify(o) {
   o = o.toLowerCase().replace(/[a-z]/g, (o) => `:regional_indicator_${o}:`);
   for (const [e, a] of Object.entries(s)) o = o.split(e).join(`:${a}:`);
+  o = o.replace(/[^:\w\s]/g, ":black_large_square:");
   return o;
 }
 console.log(emojify("{args}"));
