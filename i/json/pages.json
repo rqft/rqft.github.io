@@ -3,9 +3,8 @@
         "Main": "./"
     },
     "Projects": {
-        "Main": "./projects",
-        "Vybose": "./projects/vybose",
-        "NotSoPylon": "./projects/notsopylon"
+        "Jonathan": "https://bot.clancy.lol/",
+        "Kevin": "https://github.com/rqft/Kevin"
     },
     "Funnies": {
         "qt": "./qt",
