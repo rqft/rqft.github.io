@@ -1,19 +1,9 @@
 {
-    "Home": {
-        "Main": "./"
-    },
     "Projects": {
-        "Jonathan": "https://bot.clancy.lol/",
-        "Kevin": "https://github.com/rqft/Kevin"
+        "bot": "https://github.com/rqft/botv2",
+        "vea": "https://github.com/trueharuu/vea",
+        "rust": "https://www.npmjs.com/package/@rqft/rust",
+        "http": "https://www.npmjs.com/package/@rqft/http",
+        "fetch": "https://www.npmjs.com/package/@rqft/fetch"
     },
-    "Funnies": {
-        "qt": "./qt",
-        "lol": "./lol"
-    },
-    "Tools": {
-        "random / id": "./tools/random/id"
-    },
-    "Cool Stuff": {
-        "Color Time": "./clock"
-    }
 }
