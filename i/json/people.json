@@ -1,14 +1,13 @@
 {
-  "Jacher": {
-    "Assyst": "https://assyst.jacher.io",
-    "GitHub": "https://github.com/Jacherr/"
+  "james": {
+    "assyst": "https://assyst.jacher.io",
+    "github": "https://github.com/jacherr"
   },
-  "Tehi": {
-    "GitHub": "https://github.com/Tehi",
-    "Walking": "https://discord.gg/JBvJbBEDpA/"
+  "thowoee": {
+    "website": "https://thowoee.me/",
+    "soundcloud": "https://soundcloud.com/break_time",
   },
-  "🍰": {
-    "Detritus": "https://github.com/detritusjs",
-    "NotSoBot": "https://beta.notsobot.com/invite/"
+  "nico": {
+    "instagram": "https://www.instagram.com/iinico__"
   }
 }
