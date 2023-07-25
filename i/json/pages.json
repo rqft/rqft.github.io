@@ -1,5 +1,5 @@
 {
-    "Projects": {
+    "projects": {
         "bot": "https://github.com/rqft/botv2",
         "vea": "https://github.com/trueharuu/vea",
         "rust": "https://www.npmjs.com/package/@rqft/rust",
