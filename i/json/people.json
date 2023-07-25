@@ -1,13 +1,16 @@
 {
   "james": {
     "assyst": "https://assyst.jacher.io",
-    "github": "https://github.com/jacherr"
+    "github": "https://github.com/jacherr",
+    "discord": "https://discord.com/@me/users/233667448887312385"
   },
   "thowoee": {
     "website": "https://thowoee.me/",
-    "soundcloud": "https://soundcloud.com/break_time"
+    "soundcloud": "https://soundcloud.com/break_time",
+    "discord": "https://discord.com/@me/users/144856004771708929"
   },
   "nico": {
-    "instagram": "https://www.instagram.com/iinico__"
+    "instagram": "https://www.instagram.com/iinico__",
+    "discord": "https://discord.com/@me/users/350894331525332993"
   }
 }
