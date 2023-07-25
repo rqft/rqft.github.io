@@ -5,5 +5,5 @@
         "rust": "https://www.npmjs.com/package/@rqft/rust",
         "http": "https://www.npmjs.com/package/@rqft/http",
         "fetch": "https://www.npmjs.com/package/@rqft/fetch"
-    },
+    }
 }
